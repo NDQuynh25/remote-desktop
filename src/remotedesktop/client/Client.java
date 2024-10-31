@@ -3,6 +3,9 @@ package remotedesktop.client;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
+
+import remotedesktop.server.ReceivingScreen;
+
 import java.io.IOException;
 
 public class Client {
@@ -16,7 +19,7 @@ public class Client {
     public Client() {
         try {
             // Kết nối tới server
-            socket = new Socket("localhost", 1234);
+            socket = new Socket("192.168.200.131", 1234);
             if (socket.isConnected()) {
                 System.out.println("Connected to server");
 
